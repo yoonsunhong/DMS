@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
+
+		<title> 1_6 ifrm_Store_Management </title>
+		<meta name="description" content="">
+		<meta name="author" content="">
+			
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!-- Basic Styles -->
+		<link rel="stylesheet" type="text/css" media="screen" href="resources/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="resources/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="resources/css/style.css"><!-- 따로 제작하는 css -->
+
+		<!-- SmartAdmin Styles : Caution! DO NOT change the order -->
+		<link rel="stylesheet" type="text/css" media="screen" href="resources/css/smartadmin-production-plugins.min.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="resources/css/smartadmin-production.min.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="resources/css/smartadmin-skins.min.css">
+
+		<!-- FAVICONS -->
+		<link rel="shortcut icon" href="resources/img/favicon/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="resources/img/favicon/favicon.ico" type="image/x-icon">
+	</head>
+
+	<body class="">
+		<!--=========== iframe 시작 ===========-->
+			<div id="iframeCnt" class="gulim">
+				<button type="button" class="btn btn_bg1" id="openBtn4">신규</button>
+				<button type="button" class="btn btn_bg1">조회</button>
+				<form action="" class="search_box smart-form">
+					<div>
+						<label for="companyDivision">회사분류</label>
+						<span class="select wid1"><select name="companyDivision" id="companyDivision"><option value="1">1</option><option value="2">2</option><option value="3">3</option></select><i></i></span>
+						<label for="brandDivision">브랜드분류</label>
+						<span class="select wid1"><select name="brandDivision" id="brandDivision"><option value="1">1</option><option value="2">2</option><option value="3">3</option></select><i></i></span>
+						<label for="storeName">매장명</label>
+						<span class="input wid1"><input type="text" id="storeName"></span>
+					</div>
+				</form>
+				<section id="widget-grid">
+					<div class="row">
+						<article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<div class="grid_area">	
+								<table id="grid1"></table>
+							</div>
+							<div id="ajaxProwed1"></div>
+						</article>
+					</div>
+				</section>
+				<div id="popupLayer4" class="popup">
+					<h5>매장 정보 등록</h5>
+					<div>
+						<table class="table table-bordered smart-form">
+							<tbody>
+								<tr>
+									<th>회사명</th>
+									<td>
+										<label for="" class="select">
+											<select name="" id="">
+												<option value="">1</option>
+												<option value="">2</option>
+												<option value="">3</option>
+											</select><i></i>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<th>브랜드명</th>
+									<td>
+										<label for="" class="select">
+											<select name="" id="">
+												<option value="">1</option>
+												<option value="">2</option>
+												<option value="">3</option>
+											</select><i></i>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<th>매장명</th>
+									<td>
+										<label for="" class="input">
+											<input type="text" class="t_c">
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<th>주소</th>
+									<td>
+										<label for="" class="input mar_b_5 wid1 f_l">
+											<input type="text" disabled>
+										</label>
+										<button type="button" class="btn btn_bg2 f_l">우편번호</button>
+										<label for="" class="input mar_b_5">
+											<input type="text">
+										</label>
+										<label for="" class="input">
+											<input type="text">
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<th>전화번호</th>
+									<td>
+										<label for="" class="select wid2 mar_r_5 f_l">
+											<select name="" id="">
+												<option value="">1</option>
+												<option value="">2</option>
+												<option value="">3</option>
+											</select><i></i>
+										</label>
+										<label for="" class="input wid2 mar_r_5 f_l">
+											<input type="text" class="t_c">
+										</label>
+										<label for="" class="input wid2 f_l">
+											<input type="text" class="t_c">
+										</label>							
+									</td>
+								</tr>
+								<tr>
+									<th>운영시간</th>
+									<td>
+										<label for="" class="select wid3 f_l">
+											<select name="" id="">
+												<option value="">1</option>
+												<option value="">2</option>
+												<option value="">3</option>
+											</select><i></i>
+										</label>
+										<label for="" class="label_txt f_l">시</label>
+										<label for="" class="select wid3 f_l">
+											<select name="" id="">
+												<option value="">1</option>
+												<option value="">2</option>
+												<option value="">3</option>
+											</select><i></i>
+										</label>
+										<label for="" class="label_txt f_l">분 ~</label>
+										<label for="" class="select wid3 f_l">
+											<select name="" id="">
+												<option value="">1</option>
+												<option value="">2</option>
+												<option value="">3</option>
+											</select><i></i>
+										</label>
+										<label for="" class="label_txt f_l">시</label>
+										<label for="" class="select wid3 f_l">
+											<select name="" id="">
+												<option value="">1</option>
+												<option value="">2</option>
+												<option value="">3</option>
+											</select><i></i>
+										</label>
+										<label for="" class="label_txt f_l">분</label>
+									</td>
+								</tr>
+								<tr>
+									<th>매니저명</th>
+									<td>
+										<label for="" class="input">
+											<input type="text">
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<th>층수</th>
+									<td>
+										<label for="" class="select wid2 mar_r_5 f_l">
+											<select name="" id="">
+												<option value="">1</option>
+												<option value="">2</option>
+												<option value="">3</option>
+											</select><i></i>
+										</label>
+										<label for="" class="input wid3 f_l mar_r_5">
+											<input type="text" class="t_c">
+										</label>
+										<label for="" class="f_l label_txt">층</label>
+										<button type="button" class="btn btn_bg2 f_l">추가</button>
+										<div class="grid_area">	
+											<table id="grid2"></table>
+										</div>
+										<div id="pager2"></div>
+									</td>
+								</tr>
+								<tr>
+									<th>약도</th>
+									<td>
+										<input class="upload-name" value="파일선택" disabled="disabled">
+										<label for="attachFile" class="btn btn_bg2">파일찾기</label>
+										<input type="file" id="attachFile" class="upload-hidden">
+										<div id="map"></div>
+								</tr>
+							</tbody>
+						</table>
+						<a href="#" class="close_btn"></a>
+						<div class="layer_btn">
+							<button type="button" class="btn btn_bg1">저장</button>
+							<button type="button" class="btn btn_bg1">삭제</button>
+							<button type="button" class="btn btn_bg1 f_r">저장 후 계속 등록</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		<!--=========== iframe 끝 ===========-->
+
+		<!--================================================== -->
+		<!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
+		<script>
+			if (!window.jQuery) {
+				document.write('<script src="resources/js/libs/jquery-2.1.1.min.js"><\/script>');
+			}
+		</script>
+
+		<script>
+			if (!window.jQuery.ui) {
+				document.write('<script src="resources/js/libs/jquery-ui-1.10.3.min.js"><\/script>');
+			}
+		</script>
+
+		<!-- 공통 JS -->
+		<script src="resources/js/common.js"></script>
+
+		<script>
+		  $( function() {
+			$( ".draggable" ).draggable({
+				containment:"div",			// div영역 에서만 움직이도록 설정 
+			});
+		  });
+		</script>
+
+		<!-- BOOTSTRAP JS -->
+		<script src="resources/js/bootstrap/bootstrap.min.js"></script>
+
+		<script src="resources/js/plugin/jqgrid/jquery.jqGrid.min.js"></script>
+		<script src="resources/js/plugin/jqgrid/grid.locale-en.min.js"></script>
+
+		<script type="text/javascript">/* jqgrid */
+			$(document).ready(function() {
+				var jqgrid_data = [{
+					number: '1',
+					name : "리테일테크",
+					brand : "이마트",
+					store : "매장1",
+					level : "1층",
+					installation : "경기도 성남시 판교동",
+					device : "111-11-11111"
+					}, {
+					number: '2',
+					name : "리테일테크",
+					brand : "이마트",
+					store : "매장1",
+					level : "1층",
+					installation : "경기도 성남시 판교동",
+					device : "111-11-11111"
+				}, {
+					number: '3',
+					name : "리테일테크",
+					brand : "이마트",
+					store : "매장1",
+					level : "1층",
+					installation : "경기도 성남시 판교동",
+					device : "111-11-11111"
+				}];
+
+				jQuery("#grid1").jqGrid({
+					data : jqgrid_data,
+					datatype : "local",
+					height : 'auto',
+					colNames : ['순번','회사명', '브랜드명', '매장명', '층', '설치지역', '디바이스정보'],
+					colModel : [{
+						name : 'number',
+						index : 'number'
+					},{
+						name : 'name',
+						index : 'name'
+					}, {
+						name : 'brand',
+						index : 'brand'
+					}, {
+						name : 'store',
+						index : 'store',
+					}, {
+						name : 'level',
+						index : 'level',
+						align : "center",
+					}, {
+						name : 'installation',
+						index : 'installation',
+					}, {
+						name : 'device',
+						index : 'device',
+						align : "center",
+					}],
+					rowNum : 20,
+					rowList : [10, 20, 30],
+					pager : '#ajaxProwed1',
+					sortname : 'id',
+					toolbarfilter : true,
+					viewrecords : true,
+					sortorder : "asc",
+					editurl : "dummy.html",
+					caption : "SmartAdmin jQgrid Skin",
+					autowidth : true,
+				});
+				/* navtable 삭제 */
+				//jQuery("#grid1").jqGrid('navGrid', "#pjqgrid", {
+					//edit : false,
+					//add : false,
+				//	del : true
+				//});
+				//jQuery("#grid1").jqGrid('inlineNav', "#pjqgrid");
+				/* Add tooltips */
+				$('.navtable .ui-pg-button').tooltip({
+					container : 'body'
+				});
+
+				jQuery("#m1").click(function() {
+					var s;
+					s = jQuery("#grid1").jqGrid('getGridParam', 'selarrrow');
+					alert(s);
+				});
+				jQuery("#m1s").click(function() {
+					jQuery("#grid1").jqGrid('setSelection', "13");
+				});
+
+				// remove classes
+				$(".ui-jqgrid").removeClass("ui-widget ui-widget-content");
+				$(".ui-jqgrid-view").children().removeClass("ui-widget-header ui-state-default");
+				$(".ui-jqgrid-labels, .ui-search-toolbar").children().removeClass("ui-state-default ui-th-column ui-th-ltr");
+				$(".ui-jqgrid-pager").removeClass("ui-state-default");
+				$(".ui-jqgrid").removeClass("ui-widget-content");
+
+				// add classes
+				$(".ui-jqgrid-htable").addClass("table table-bordered table-hover");
+				$(".ui-jqgrid-btable").addClass("table table-bordered table-striped");
+
+				$(".ui-pg-div").removeClass().addClass("btn btn-sm btn-primary");
+				$(".ui-icon.ui-icon-plus").removeClass().addClass("fa fa-plus");
+				$(".ui-icon.ui-icon-pencil").removeClass().addClass("fa fa-pencil");
+				$(".ui-icon.ui-icon-trash").removeClass().addClass("fa fa-trash-o");
+				$(".ui-icon.ui-icon-search").removeClass().addClass("fa fa-search");
+				$(".ui-icon.ui-icon-refresh").removeClass().addClass("fa fa-refresh");
+				$(".ui-icon.ui-icon-disk").removeClass().addClass("fa fa-save").parent(".btn-primary").removeClass("btn-primary").addClass("btn-success");
+				$(".ui-icon.ui-icon-cancel").removeClass().addClass("fa fa-times").parent(".btn-primary").removeClass("btn-primary").addClass("btn-danger");
+
+				$(".ui-icon.ui-icon-seek-prev").wrap("<div class='btn btn-sm btn-default'></div>");
+				$(".ui-icon.ui-icon-seek-prev").removeClass().addClass("fa fa-backward");
+
+				$(".ui-icon.ui-icon-seek-first").wrap("<div class='btn btn-sm btn-default'></div>");
+				$(".ui-icon.ui-icon-seek-first").removeClass().addClass("fa fa-fast-backward");
+
+				$(".ui-icon.ui-icon-seek-next").wrap("<div class='btn btn-sm btn-default'></div>");
+				$(".ui-icon.ui-icon-seek-next").removeClass().addClass("fa fa-forward");
+
+				$(".ui-icon.ui-icon-seek-end").wrap("<div class='btn btn-sm btn-default'></div>");
+				$(".ui-icon.ui-icon-seek-end").removeClass().addClass("fa fa-fast-forward");
+
+			})
+			
+			$(window).on('resize.jqGrid', function() {
+				$("#grid1").jqGrid('setGridWidth', $("#widget-grid").width() );
+			})    
+
+			$(function(){
+				$(window).bind('resize', function() {
+					var height = $(window).height() - 262;
+					$("#grid1").setGridHeight( height );
+
+					if ( height < 300 ) {
+						$("#grid1").setGridHeight( 300 );
+					}
+
+				}).trigger('resize');
+			});
+
+			$(document).ready(function (){/* jqgrid 제목 변경 */
+				$(".ui-jqgrid .ui-jqgrid-title").before('<i class="fa fa-list-alt"></i>').text('매장 목록');
+			});
+
+		</script>
+	</body>
+
+</html>

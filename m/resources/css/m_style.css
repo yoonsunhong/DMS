@@ -1,0 +1,106 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+/*====== 공통 ======*/
+body{font-family:'Nanum Gothic', '굴림', 'sans-serif';color:#4c4f53;overflow-y:hidden;-webkit-text-size-adjust:none}
+.gulim{font-family:'굴림';font-size:12px;color:#4c4f53}
+
+ul, ol{list-style:none;margin:0px;padding:0px;}
+
+.f_l{float:left;}
+.f_r{float:right;}
+.p_r{position:relative;}
+.p_a{position:absolute;}
+
+.t_c{text-align:center}
+
+/*====== 레이아웃 ======*/
+body #loginHeader{width:100%;padding-right:0;}
+body #header, body #loginHeader, body #loginHeader #logo-group{height:46px}
+body #header #logo{width:initial;margin:0;padding:10.5px 0 0 10px}
+#loginHeader #logo{width:inherit;height:46px;line-height:46px;padding-left:20px;margin:0px;text-align:center;vertical-align:middle}
+#header #logo img, #loginHeader #logo img{padding-left:0}
+body #loginMain, body #main{width:100%;height:100%;min-height:500px;margin-left:0;background:#fff;border-top:3px solid #cc071e;overflow-x:hidden;}
+body #main{overflow-y:visible}
+
+body #header{padding:0}
+body #header>:first-child{width:100%;height:inherit}
+#header h1{width:30%;height:46px;line-height:46px;margin:0 auto;text-align:center;color:#da242a;font-size:16px;font-weight:bold;}
+#header p{position:absolute;width:75px;height:30px;line-height:30px;top:8px;right:10px;background:#3a3633;color:#fff;text-align:center;font-size:14px}
+
+/* login */
+.login .well{margin-bottom:0}
+.login .login_cnt{position: absolute;top:0px;right:0px;bottom:0;left:0%;width:95%;height: 379px;margin: auto;}
+.login h2{padding-bottom:10px;text-align:center;border-bottom:2px solid #000}
+.login .smart-form .input .icon-append+input{height:40px;line-height:40px}
+.login .client-form header{padding:10px;text-align:center;font-size:18px;font-weight:bold}
+.login .smart-form fieldset{padding-top:23.5px;padding-bottom:23.5px}
+.smart-form input[type="button"], .search_box + input[type="button"]{width:100%;height:40px;line-height:40px;border:0;background:#cc071e;text-align:center;color:#fff;font-size:14px;-webkit-border-radius:0px; -moz-border-radius:0px; border-radius:0px;}
+.login_cnt .smart-form .icon-append, .login_cnt .smart-form .icon-prepend{padding-top:4px}
+
+.area{width:97%;margin:0px auto;}
+/* 모바일 전용 */
+@media all and (min-width:0px) and (max-width:479px) {
+	body #header #logo{padding:14px 0 0 5px}
+	#header #logo img{width:80px}
+	#header h1{width:128px;font-size:14px}
+	#header p{top:10.5px;right:5px;width:60px;height:25px;line-height:25px;font-size:12px}
+
+	.search_box + input[type="button"]{background-position:40% 10px}
+}
+
+@media all and (min-width:480px) and (max-width:639px) {
+	.search_box + input[type="button"]{background-position:44% 10px}
+
+}
+@media all and (min-width:640px) and (max-width:767px) {
+	.search_box + input[type="button"]{background-position:45% 10px}
+
+}
+@media all and (min-width:768px) and (max-width:1023px) {
+	.search_box + input[type="button"]{background-position:46% 10px}
+
+}
+@media all and (min-width:1024px) and (max-width:1365px) {
+	.search_box + input[type="button"]{background-position:47% 10px}
+
+}
+@media all and (min-width:1366px) {
+	.search_box + input[type="button"]{background-position:48% 10px}
+}
+
+
+
+form.search_box{width:100%;margin:10px auto;padding:7px 10px 0 10px;background:#fff;border:1px solid #cc071e;box-sizing:border-box;}
+.search_box > div{width:100%;height:31px;margin-bottom:7px}
+.search_box div > label{float:left;height:31px;line-height:31px;padding-left:5px}
+.search_box div > label:first-child{width:52px}
+body .smart-form .select select{height:31px}
+.search_box label.select, .search_box label.input{float:left;margin-left:0;background:none}
+.search_box + input[type="button"]{margin-bottom:10px;}
+.search_box:first-child + input[type="button"]{width:100%;background-color:#3a3633;background-image:url("../img/search.png");background-repeat:no-repeat;background-size:20px 20px}
+
+/*====== 콘텐츠 부분 ======*/
+/* form */
+.popup .smart-form .input input{height:26px;line-height:26px}
+.search_box a.btn{-webkit-border-radius:0px; -moz-border-radius:0px; border-radius:0px;}
+
+/*jqgrid*/
+.ui-jqgrid .ui-jqgrid-htable th div{text-align:center}/*thead th 텍스트 위치*/
+.ui-jqgrid .ui-jqgrid-titlebar{background:#fafafa;padding:6px 13px}/*thead 높이*/
+.ui-jqgrid .ui-jqgrid-title{font-size:12px;padding-left:7px;font-weight:bold;} /*jqgrid 타이틀*/
+.grid_area .jarviswidget{margin-top:0px;margin-bottom:0px}
+.grid_area .ui-jqgrid .ui-jqgrid-titlebar{padding:7px 5px 7px 12px;background-color:#fafafa;background-image:none;}
+.grid_area .ui-jqgrid .ui-pg-input, .grid_area .ui-jqgrid .ui-pg-selbox{-webkit-border-radius:0px; -moz-border-radius:0px; border-radius:0px;}
+.grid_area .ui-jqgrid .ui-pg-selbox{margin-top:5px}
+/* icon */
+.glyphicon{vertical-align:middle;padding:2px 13px 5px 4.5px}
+.delete{margin: -3px 5px 0 0;}
+
+body .ui-jqgrid .ui-pg-table td{font-size:12px}
+/* 프레임워크 제어 */
+.pad_l_0{padding-left:0}
+.mar_t_10{margin-top:10px}
+.popup .mar_r_5{margin-right:5px}
+.popup .mar_b_5{margin-bottom:5px}
+

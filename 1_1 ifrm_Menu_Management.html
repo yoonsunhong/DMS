@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title> 1_1 ifrm_Menu_Management </title>
+		<meta name="description" content="">
+		<meta name="author" content="">
+			
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!-- Basic Styles -->
+		<link rel="stylesheet" type="text/css" media="screen" href="resources/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="resources/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="resources/css/style.css"><!-- 따로 제작하는 css -->
+
+		<!-- SmartAdmin Styles : Caution! DO NOT change the order -->
+		<link rel="stylesheet" type="text/css" media="screen" href="resources/css/smartadmin-production-plugins.min.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="resources/css/smartadmin-production.min.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="resources/css/smartadmin-skins.min.css">
+
+		<!-- FAVICONS -->
+		<link rel="shortcut icon" href="resources/img/favicon/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="resources/img/favicon/favicon.ico" type="image/x-icon">
+	</head>
+
+	<body class="">
+		<!--=========== iframe 시작 ===========-->
+			<div id="iframeCnt" class="gulim">
+				<div>
+					<button type="button" class="btn btn_bg1">신규</button>
+					<button type="button" class="btn btn_bg1">저장</button>
+					<button type="button" class="btn btn_bg1">조회</button>
+					<span class="side_text">* 신규 메뉴 추가시 왼쪽 트리메뉴를 선택하시면 그 하위로 메뉴가 추가됩니다.</span>
+				</div>
+				<div class="col-sm-12 col-md-12 col-lg-3">
+					<div class="jarviswidget box_menu" id="wid-id-0">
+						<header role="heading">
+							<span class="widget-icon"><i class="fa fa-sitemap"></i></span>
+							<h2>메뉴</h2>
+							<span class="jarviswidget-loader"><i class="fa fa-refresh fa-spin"></i></span></header>
+							<div role="content">
+								<div class="tree_menu">
+									<ul id="tree_menu_ul">
+										<li>
+											<span>기본정보관리 (1)</span>
+											<ul>
+												<li><span>사용자관리 (10)</span></li>
+												<li><span>권한그룹관리 (20)</span></li>
+												<li><span>공통코드관리 (30)</span></li>
+												<li><span>거래처관리(DEL) (40)</span></li>
+												<li><span>메뉴관리 (50)</span></li>
+												<li><span>회사관리 (60)</span></li>
+												<li><span>브랜드관리 (70)</span></li>
+												<li><span>매장관리 (80)</span></li>
+												<li><span>매장정보 일괄등록 (90)</span></li>
+											</ul>
+										</li>
+										<li>
+											<span>디바이스 정보관리 (2)</span>
+											<ul>
+												<li><span>디바이스 정보 조회 (1)</span></li>
+												<li><span>디바이스 정보 등록 (2)</span></li>
+												<li><span>디바이스 정보 일괄등록 (3)</span></li>
+												<li><span>매입관리(DEL) (10)</span></li>
+												<li><span>매출관리(DEL) (20)</span></li>
+												<li><span>가매출관리(DEL) (30)</span></li>
+											</ul>
+										</li>
+										<li>
+											<span>로그/장애 관리 (3)</span>
+											<ul>
+												<li><span>입고관리(DEL) (10)</span></li>
+												<li><span>출고관리(DEL) (20)</span></li>
+												<li><span>디바이스 로그 조회 (30)</span></li>
+												<li><span>에러 로그 조회 (40)</span></li>
+												<li><span>장애 관리 (50)</span></li>
+												<li><span>설치이력 조회 (60)</span></li>
+											</ul>
+										</li>
+										<li>
+											<span>DashBoard (4)</span>
+											<ul>
+												<li><span>DashBoard (1)</span></li>
+												<li><span>데모관리(DEL) (10)</span></li>
+												<li><span>팝업 입력예제1(DEL) (20)</span></li>
+												<li><span>팝업 입력예제2(DEL) (30)</span></li>
+												<li><span>반품관리(DEL) (40)</span></li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-12 col-lg-9">
+					<div class="jarviswidget" id="wid-id-0">
+						<header role="heading">
+							<span class="widget-icon"> <i class="fa fa-edit"></i> </span>
+							<h2>메뉴정보</h2>
+							<span class="jarviswidget-loader"><i class="fa fa-refresh fa-spin"></i></span></header>
+							<!-- widget div-->
+							<div role="content">
+								<!-- widget content -->
+								<div class="pad_l_0">
+									<table class="table table-bordered table_st2 smart-form">
+										<tbody>
+											<tr>
+												<th><span class="dot"></span><label for="topMenu">상위메뉴</label></th>
+												<td colspan='3'><span class="input"><input type="text" id="topMenu"></span></td>
+											</tr>
+											<tr>
+												<th><span class="dot"></span><label for="menuID">메뉴ID</label></th>
+												<td colspan='3'><span class="input"><input type="text" id="menuID"></span></td>
+											</tr>
+											<tr>
+												<th><label for="menuName">메뉴명</label></th>
+												<td colspan='3'><span class="input"><input type="text" id="menuName"></span></td>
+											</tr>
+											<tr>
+												<th><label for="note">비고</label></th>
+												<td colspan='3'><span class="input"><input type="text" id="note" ></span></td>
+											</tr>
+											<tr>
+												<th><label for="className">클래스명</label></th>
+												<td colspan='3'><span class="input wid1"><input type="text" id="className"></span></td>
+											</tr>
+											<tr>
+												<th><span class="dot"></span><label for="meneDivision">메뉴구분</label></th>
+												<td colspan='3'><span class="select"><select name="meneDivision" id="meneDivision" ><option value="1">1</option><option value="2">2</option><option value="3">3</option></select><i></i></span></td>
+											</tr>
+											<tr>
+												<th><span class="dot"></span><label for="rangeOrder">정렬순서</label></th>
+												<td colspan='3'><span class="input"><input type="text" id="rangeOrder"></span><span class="side_text2">* 왼쪽 메뉴의 괄호안의 정렬숫자를 참조하세요</span></td>
+											</tr>
+											<tr>
+												<th><span class="dot"></span><label for="useDivision">사용구분</label></th>
+												<td colspan='3'><span class="select"><select name="useDivision" id="useDivision"><option value="1">1</option><option value="2">2</option><option value="3">3</option></select><i></i></span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- end widget content -->
+							</div>
+							<!-- end widget div -->
+					</div>
+				</div>
+			</div>
+		<!--=========== iframe 끝 ===========-->
+
+		<!--================================================== -->
+		<!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
+		<script>
+			if (!window.jQuery) {
+				document.write('<script src="resources/js/libs/jquery-2.1.1.min.js"><\/script>');
+			}
+		</script>
+
+		<!-- 공통 JS -->
+		<script src="resources/js/common.js"></script>
+
+		<!-- BOOTSTRAP JS -->
+		<script src="resources/js/bootstrap/bootstrap.min.js"></script>
+	</body>
+</html>
